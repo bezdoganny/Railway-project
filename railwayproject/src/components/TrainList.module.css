@@ -1,0 +1,132 @@
+/* TrainList.module.css */
+.wrapper {
+  padding: 40px 0 60px;
+}
+
+/* ---- Пошук / фільтри ---- */
+.searchBar {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.input,
+.select {
+  height: 44px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0 14px;
+  color: var(--color-text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+.input::placeholder {
+  color: var(--color-muted);
+}
+
+.select option {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.resetBtn {
+  height: 44px;
+  padding: 0 20px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+  color: var(--color-muted-2);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  transition: all 0.2s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+.resetBtn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+/* ---- Результати ---- */
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.resultsCount {
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.resultsCount strong {
+  color: var(--color-accent-2);
+  font-family: var(--font-display);
+}
+
+/* ---- Список карток ---- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Порожній стан ---- */
+.empty {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--color-muted);
+}
+
+.emptyIcon {
+  font-size: 56px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-muted-2);
+  margin-bottom: 8px;
+}
